@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Makes the website responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal UI</title>
+    <!-- Connect CSS file -->
+    <link rel="stylesheet" href="task-17.css">
+</head>
+<body>
+    <!-- ================= HEADER ================= -->
+    <header>
+        <!-- Website logo -->
+        <div class="logo">
+            JobConnect
+        </div>
+        <!-- Navigation menu -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#jobs">Jobs</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>
+                Find Your Dream Job
+            </h1>
+            <p>
+                Search thousands of opportunities
+                and find the right job for you.
+            </p>
+            <a href="#jobs" class="hero-button">
+                Explore Jobs
+            </a>
+        </div>
+    </section>
+    <!-- ================= JOB SECTION ================= -->
+    <section id="jobs">
+        <h2>
+            Latest Job Opportunities
+        </h2>
+        <!-- Search and filter area -->
+        <div class="search-area">
+            <!-- Search by job title or company -->
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by job title or company..."
+            >
+            <!-- Category filter -->
+            <select id="categoryFilter">
+                <option value="all">
+                    All Categories
+                </option>
+                <option value="Technology">
+                    Technology
+                </option>
+                <option value="Design">
+                    Design
+                </option>
+                <option value="Marketing">
+                    Marketing
+                </option>
+                <option value="Finance">
+                    Finance
+                </option>
+            </select>
+            <!-- Location filter -->
+            <select id="locationFilter">
+                <option value="all">
+                    All Locations
+                </option>
+                <option value="Remote">
+                    Remote
+                </option>
+                <option value="Delhi">
+                    Delhi
+                </option>
+                <option value="Mumbai">
+                    Mumbai
+                </option>
+                <option value="Bangalore">
+                    Bangalore
+                </option>
+            </select>
+        </div>
+        <!-- Job cards will be created by JavaScript -->
+        <div
+            id="jobList"
+            class="job-container"
+        ></div>
+    </section>
+    <!-- ================= JOB DETAILS MODAL ================= -->
+    <div
+        id="jobModal"
+        class="modal"
+    >
+        <div class="modal-content">
+            <!-- Close button -->
+            <span
+                class="close"
+                onclick="closeJobDetails()"
+            >
+                &times;
+            </span>
+            <h2 id="detailTitle">
+                Job Title
+            </h2>
+            <p id="detailCompany">
+                Company
+            </p>
+            <p id="detailLocation">
+                Location
+            </p>
+            <p id="detailCategory">
+                Category
+            </p>
+            <p id="detailSalary">
+                Salary
+            </p>
+            <hr>
+            <h3>
+                Job Description
+            </h3>
+            <p id="detailDescription">
+                Job description
+            </p>
+            <button
+                id="applyButton"
+                onclick="applyForJob()"
+            >
+                Apply Now
+            </button>
+        </div>
+    </div>
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="about-section">
+        <h2>
+            About JobConnect
+        </h2>
+        <p>
+            JobConnect is a simple job-search interface
+            designed to help users explore job opportunities,
+            search listings and view job details.
+        </p>
+    </section>
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <h3>
+            JobConnect
+        </h3>
+        <p>
+            Find opportunities. Build your career.
+        </p>
+        <p>
+            © 2026 JobConnect
+        </p>
+    </footer>
+    <!-- Connect JavaScript file -->
+    <script src="task-17.js"></script>
+</body>
+</html>
